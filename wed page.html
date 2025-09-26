@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephina - Professional Portfolio</title>
+
+    <style>
+        /* Define variables for easy color changes */
+        :root {
+            --primary-color: #007bff; /* A nice blue */
+            --secondary-color: #6c757d; /* Gray for secondary text */
+            --background-dark: #222831; /* Dark background */
+            --background-light: #ffffff; /* White background */
+            --text-light: #eeeeee; /* Light text color */
+            --text-dark: #333333; /* Dark text color */
+        }
+
+        /* Reset basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; /* Makes the header stick to the top */
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 80px 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        section:nth-child(even) {
+            background-color: #f4f4f9; /* Light gray for alternating sections */
+        }
+
+        h1, h2 {
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 100px 50px;
+        }
+
+        #hero h1 {
+            color: var(--text-light);
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        #hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: var(--text-light);
+        }
+
+        /* Button Styling */
+        .button {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Skills Section */
+        #skills .skill-list {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        #skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        #skills li {
+            background-color: var(--background-light);
+            border: 1px solid var(--primary-color);
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Portfolio Section */
+        #portfolio .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+
+        .project-card {
+            background-color: var(--background-light);
+            border: 1px solid #dddddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        /* Contact Section */
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        #contact input[type="text"],
+        #contact input[type="email"],
+        #contact textarea {
+            padding: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--background-dark);
+            color: var(--secondary-color);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Stephina</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm Stephina.</h1>
+            <p>A passionate Web Developer specializing in front-end design and user experience.</p>
+            <a href="#portfolio" class="button">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto;">I have 5 years of experience crafting beautiful and functional websites. My goal is to build accessible, high-performance, and engaging digital experiences.</p>
+        <p style="text-align: center; max-width: 700px; margin: 20px auto;">Currently seeking opportunities to work with innovative teams.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React & Vue.js</li>
+            </ul>
+            <ul>
+                <li>Responsive Design</li>
+                <li>Git/GitHub</li>
+                <li>UI/UX Principles</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>My Work</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project Alpha</h3>
+                <p>A corporate landing page built with React.</p>
+                <a href="#" class="button" style="padding: 8px 15px;">Details</a>
+            </div>
+            <div class="project-card">
+                <h3>Project Beta</h3>
+                <p>An e-commerce mobile application interface.</p>
+                <a href="#" class="button" style="padding: 8px 15px;">Details</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit" class="button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Stephina. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
